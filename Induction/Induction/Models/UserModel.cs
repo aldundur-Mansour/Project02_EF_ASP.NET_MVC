@@ -1,0 +1,28 @@
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+
+namespace Induction.Models
+{
+    public class UserModel
+    {
+        public int Id { get; set; }
+        [Required]
+        public string Name { get; set; }
+        [EmailAddress]
+        public string Email { get; set; }
+        [MinLength(8)]
+        public string Password { get; set;  }
+        
+        
+        
+        
+          
+        //Relationship : One-To-Many: User => Motivations
+        public List<MotivationModel> Motivations { get; set; }
+        //Relationship : One-To-Many: User => Facts
+        public List<FactModel> Facts { get; set; }
+        
+    }
+    
+  
+}

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace Induction.Models
 {
@@ -11,6 +12,7 @@ namespace Induction.Models
         [EmailAddress]
         public string Email { get; set; }
         [MinLength(8)]
+        [JsonIgnore]
         public string Password { get; set;  }
         
         

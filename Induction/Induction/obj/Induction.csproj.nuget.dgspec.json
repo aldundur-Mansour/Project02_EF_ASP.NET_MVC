@@ -1,27 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lenovo1\\RiderProjects\\Induction\\Induction\\Induction.csproj": {}
+    "/Users/thamerasiri/Projects/Mansour/Project02_EF_ASP.NET_MVC/Induction/Induction/Induction.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lenovo1\\RiderProjects\\Induction\\Induction\\Induction.csproj": {
+    "/Users/thamerasiri/Projects/Mansour/Project02_EF_ASP.NET_MVC/Induction/Induction/Induction.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lenovo1\\RiderProjects\\Induction\\Induction\\Induction.csproj",
+        "projectUniqueName": "/Users/thamerasiri/Projects/Mansour/Project02_EF_ASP.NET_MVC/Induction/Induction/Induction.csproj",
         "projectName": "Induction",
-        "projectPath": "C:\\Users\\lenovo1\\RiderProjects\\Induction\\Induction\\Induction.csproj",
-        "packagesPath": "C:\\Users\\lenovo1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lenovo1\\RiderProjects\\Induction\\Induction\\obj\\",
+        "projectPath": "/Users/thamerasiri/Projects/Mansour/Project02_EF_ASP.NET_MVC/Induction/Induction/Induction.csproj",
+        "packagesPath": "/Users/thamerasiri/.nuget/packages/",
+        "outputPath": "/Users/thamerasiri/Projects/Mansour/Project02_EF_ASP.NET_MVC/Induction/Induction/obj/",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\lenovo1\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/thamerasiri/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,6 +41,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.2, )"
+            },
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.10, )"
@@ -65,6 +74,10 @@
             "Swashbuckle.AspNetCore.Swagger": {
               "target": "Package",
               "version": "[6.1.4, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.11.1, )"
             }
           },
           "imports": [
@@ -85,7 +98,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.203/RuntimeIdentifierGraph.json"
         }
       }
     }

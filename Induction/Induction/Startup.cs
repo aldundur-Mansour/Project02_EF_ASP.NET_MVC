@@ -17,11 +17,14 @@ using System.IO;
 using Induction.Models;
 using Induction.Repositories;
 using Microsoft.OpenApi.Models;
+using Induction.Helpers;
 
 namespace Induction
 {
     public class Startup
     {
+        private string[] ALLOWED_ORIGINS = new string[] {"http://localhost:3000"};
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -32,6 +35,8 @@ namespace Induction
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
+
             services.AddDbContext<AppDbContext>(options =>
                 options.UseMySQL(Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllers();
@@ -70,7 +75,8 @@ namespace Induction
             services.AddScoped<IChapterChunkRepository, ChapterChunkRepository>();
             services.AddScoped<IQuotesRepository, QuoteRepository>();
             services.AddScoped<IFactRepository, FactRepository>();
-
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IJwtService, JwtService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -90,6 +96,13 @@ namespace Induction
             app.UseStaticFiles();*/
 
             app.UseRouting();
+
+            app.UseCors(options => options
+            .WithOrigins(ALLOWED_ORIGINS)
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowCredentials()
+            );
 
             /*app.UseAuthorization();*/
 
